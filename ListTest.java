@@ -9,6 +9,7 @@ public class ListTest {
 	public static void main(String[] args) {
 		
 		Scanner in = new Scanner(System.in);
+		List list = new List();
 
 		while(!input.equals("end")){
 			
@@ -29,7 +30,23 @@ public class ListTest {
 			input = in.nextLine();
 			
 			switch(input){
-			case "A": 
+			case "A": System.out.print("Enter data value: ");
+			int data = in.nextInt();
+			in.nextLine();
+			ListElement le = new ListElement(data);
+			list.addElement(le);
+			
+			case "R": System.out.print("Enter index of node: ");
+			int index = in.nextInt();
+			in.nextLine();
+			ListElement node = list.getElement(index);
+			
+			case "D": System.out.print("Enter index of node: ");
+			index = in.nextInt();
+			in.nextLine();
+			list.deleteElement(index);
+			
+			case "PH": list.printLinkedListHead();
 			}
 		}
 		

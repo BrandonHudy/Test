@@ -10,6 +10,11 @@ public class ListElement {
 		this.next = null;
 	}
 	
+	public ListElement(int data){
+		this.data = data;
+		this.next = null;
+	}
+	
 	public void setData(int data){
 		this.data = data;
 	}

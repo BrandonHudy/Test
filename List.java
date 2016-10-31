@@ -52,10 +52,13 @@ public class List {
 			temp2 = temp2.getNext();
 		}
 		temp2.setNext(temp1.getNext());
+		count--;
+	
 	}
 	
 	public void printLinkedListHead()
 	{
+		{
 		ListElement temp = head;
 		System.out.print("List: ");
 		do
@@ -67,6 +70,7 @@ public class List {
 		}
 		temp = temp.getNext();
 		}while(temp.getNext()!=null);	
+		}
 	}
 	
 	public void printLinkedListTail()
@@ -76,5 +80,10 @@ public class List {
 		{
 			
 		}
+	}
+	
+	public int getCount()
+	{
+		return count;
 	}
 }
